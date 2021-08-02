@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="methods" name="SmokeTest">
+<suite thread-count="5" parallel="methods" name="SmokeTest">
 	<listeners>
         <listener class-name="com.demo.listeners.SuiteAlterListener"/>
         <listener class-name="com.ch.retry.RetryAnalyzerAnnotationTransformerListener"/>

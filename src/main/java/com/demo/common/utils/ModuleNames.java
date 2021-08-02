@@ -1,9 +1,6 @@
 package com.demo.common.utils;
 
 public class ModuleNames {
-	private ModuleNames() {
-
-	}
 
 	public static final String MYACCOUNT = "MyAccount";
 
@@ -50,18 +47,13 @@ public class ModuleNames {
 	public static final String M_CHECKOUT = "M_Checkout";
 
 	public static final String M_SHOPFLOW = "M_ShopFlow";
-	
+
 	public static final String SURPRISE_GLOBAL = "Surprise_Global";
-	
+
 	public static final String M_SURPRISE_GLOBAL = "M_Surprise_Global";
-	
+
 	public static final String SURPRISE_SHOPFLOW = "Surprise_ShopFlow";
-	
+
 	public static final String SURPRISE_MYACCOUNT = "Surprise_MyAccount";
-	
-	
-	
-	
-	
 
 }

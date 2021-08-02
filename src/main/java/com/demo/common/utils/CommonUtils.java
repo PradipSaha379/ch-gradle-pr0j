@@ -15,14 +15,10 @@ import com.ch.utils.Type;
 
 public class CommonUtils {
 
-	private CommonUtils() {
-
-	}
-
 	public static void loadAUTUrl() throws IOException {
 		String url = "";
 		if (AbstractTestCaseReport.runConfig.getEnvironment() == null) {
-			String environment = PropertyUtil.getConfigValue("ENVIRONMENT");
+			String environment = PropertyUtil.getInstance().getConfigValue("ENVIRONMENT");
 			AbstractTestCaseReport.runConfig.setEnvironment(environment);
 		}
 		if (AbstractTestCaseReport.runConfig.getEnvironment().equalsIgnoreCase("Dev")) {
@@ -76,7 +72,7 @@ public class CommonUtils {
 		String url = null;
 		if (environment != null) {
 			// if (environment.equalsIgnoreCase("dev")) {
-			url = PropertyUtil.getPropertyValue(envValue, FileConstants.SERVER_PROPERTY_FILE);
+			url = PropertyUtil.getInstance().getPropertyValue(envValue, FileConstants.SERVER_PROPERTY_FILE);
 			// }
 			// else if (environment.equalsIgnoreCase("stage")) {
 			// url = PropertyUtil.getPropertyValue("AUT_URL_STAGE",
