@@ -1,5 +1,7 @@
 package com.demo.desktoppages;
 
+import java.time.Duration;
+
 import com.ch.excelutils.ExcelBean;
 import com.ch.excelutils.ExcelProperty;
 import com.ch.reports.FrameworkException;
@@ -17,7 +19,9 @@ public class GlobalPage {
 	 */
 	public boolean isTopNavigationDisplayed() throws FrameworkException {
 		ExcelBean element1 = ExcelProperty.getElementValue(ModuleNames.M_GLOBAL, ObjectConstants.NEW_CATEGORY);
+		SeleniumUtils.waitUntilVisibilityOfElement(element1, 3);
 		ExcelBean element2 = ExcelProperty.getElementValue(ModuleNames.GLOBAL, ObjectConstants.HANDBAGS_CATEGORY);
+		SeleniumUtils.waitUntilElementToBeSelectedWithFluentWait(element2, Duration.ofSeconds(3), Duration.ofSeconds(1));
 		ExcelBean element3 = ExcelProperty.getElementValue(ModuleNames.GLOBAL, ObjectConstants.CLOTHING_CATEGORY);
 		ExcelBean element4 = ExcelProperty.getElementValue(ModuleNames.GLOBAL, ObjectConstants.SHOES_CATEGORY);
 		ExcelBean element5 = ExcelProperty.getElementValue(ModuleNames.GLOBAL, ObjectConstants.JEWELRY_CATEGORY);

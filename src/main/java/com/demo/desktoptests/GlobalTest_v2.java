@@ -37,7 +37,6 @@ public class GlobalTest_v2 extends AbstractDemoTest {
 			populateTestReport( "2", "Top Navigation Test 2", TestStatus.INFO, null, takeScreenShot());
 			getTestReport().setSuiteName("Smoke");
 			testSetup();
-			// AssertUtil.assertTrue(GlobalPage.isTopNavigationDisplayed());
 			populateSteps("Loaded Navigation Page",TestStatus.INFO,  takeScreenShot());
 			AssertUtil.assertTrue(true, "Top navigation menu not displayed");
 			populateSteps("Top navigation  menu is displayed",TestStatus.PASS,  takeScreenShot());
