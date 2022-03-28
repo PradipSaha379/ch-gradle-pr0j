@@ -4,8 +4,10 @@ import java.lang.reflect.Method;
 
 import org.openqa.selenium.WebDriverException;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.ch.reports.FrameworkException;
 import com.ch.retry.MaxRetryCount;
 import com.ch.status.TestStatus;
 import com.ch.utils.AssertUtil;
@@ -126,8 +128,37 @@ public class GlobalTest_v2 extends AbstractDemoTest {
 			applicationException();
 
 	}
+	
+	@DataProvider(name = "products")
+	public Object[][] getProductsData() throws FrameworkException {
+
+		Object[][] data = dataProvider.getDataProvider("products");
+		return data;
+
+	}
+	
+	@DataProvider(name = "store")
+	public Object[][] getStoreData() throws FrameworkException {
+		String dataLookUpSheetName = "store-"+runConfig.getEnvironment();
+		Object[][] data = dataProvider.getDataProvider(dataLookUpSheetName);
+		return data;
+
+	}
+	
+	@Test( groups = { "DP", "Home", "Smoke" }, dataProvider = "products")
+	public void testProductDataProvider(String productId) throws Exception {
+		System.out.println(" dataProviderTest "+ productId);
+	}
+	
+	@Test( groups = { "DP", "Home", "Smoke" }, dataProvider = "store")
+	public void testStoreDataProvider(String name, String city, String state, String zipcode) throws Exception {
+		System.out.println(" Store Name "+ name);
+		System.out.println(" Store city "+ city);
+		System.out.println(" Store state "+ state);
+		System.out.println(" Store zipcode "+ zipcode);
+	}
 
 	private void applicationException() {
-	 throw new WebDriverException("Some driver execption happened");
+	 throw new WebDriverException("Some driver exception happened");
 	}
 }
