@@ -5,13 +5,12 @@ import java.io.IOException;
 import com.ch.test.AbstractTest;
 import com.demo.common.utils.CommonUtils;
 
-public abstract class AbstractDemoTest extends AbstractTest {
+public class AbstractMobileTest extends AbstractTest {
+	
 
 	public void testSetup() throws IOException {
-		CommonUtils.desktopView();
+		CommonUtils.mobileView();
 		CommonUtils.loadAUTUrl();
-		CommonUtils.closePopup();
-
 	}
 
 }

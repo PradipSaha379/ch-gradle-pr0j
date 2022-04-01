@@ -1,18 +1,19 @@
-package com.demo.desktoptests;
+package com.demo.mobiletests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.ch.retry.MaxRetryCount;
 import com.ch.status.TestStatus;
+import com.demo.common.tests.AbstractMobileTest;
 import com.demo.tests.AbstractGlobalTest;
 
-public class GlobalTest_v2 extends AbstractGlobalTest {
+public class MobileTest extends AbstractMobileTest {
 	
 
 		@MaxRetryCount(3)
 	@Test( groups = { "P140", "Home", "Smoke" })
-	public void isDesktopSpecificTopNavigationWithRetry() throws Exception {
+	public void isMobileSpecificTopNavigationWithRetry() throws Exception {
 			System.out.println(" isTopNavigationFailureWithRetry ");
 			populateTestReport( "8", "Top Navigation Test 8", TestStatus.INFO, null, null);
 			testSetup();

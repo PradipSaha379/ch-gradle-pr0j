@@ -7,7 +7,7 @@
 	<test name="Tests">
 		<groups>
 			<run>				
-			<include name="DP"/>
+			<include name="Smoke"/>
 			</run>
 		</groups>
 	</test>

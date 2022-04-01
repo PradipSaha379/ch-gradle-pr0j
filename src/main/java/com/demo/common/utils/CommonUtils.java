@@ -88,6 +88,10 @@ public class CommonUtils {
 		DriverFactory.getDriver().manage().window().maximize();
 	}
 
+	public static void mobileView() {
+	
+	}
+
 
 	public static void closePopup() {
 
