@@ -9,8 +9,8 @@ import com.demo.pages.AbstractGlobalPage;
 public class MobileGlobalPage extends AbstractGlobalPage {
 
 	public MobileGlobalPage() throws FrameworkException {
-		newcategory = ExcelProperty.getElementValue(ModuleNames.GLOBAL, ObjectConstants.NEW_CATEGORY);
-		handbagsCategory = ExcelProperty.getElementValue(ModuleNames.GLOBAL, ObjectConstants.HANDBAGS_CATEGORY);
-		clothingCategory = ExcelProperty.getElementValue(ModuleNames.GLOBAL, ObjectConstants.CLOTHING_CATEGORY);
+		newcategory = ExcelProperty.getElementValue(ModuleNames.M_GLOBAL, ObjectConstants.NEW_CATEGORY);
+		handbagsCategory = ExcelProperty.getElementValue(ModuleNames.M_GLOBAL, ObjectConstants.HANDBAGS_CATEGORY);
+		clothingCategory = ExcelProperty.getElementValue(ModuleNames.M_GLOBAL, ObjectConstants.CLOTHING_CATEGORY);
 	}
 }
